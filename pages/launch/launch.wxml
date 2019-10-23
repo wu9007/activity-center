@@ -1,6 +1,6 @@
 <swiper class="launch_wrp" bindchange="swiperchange">
-  <swiper-item wx:for="{{banners}}" wx:key="id">
-    <image src="../images/activity_selected.png" mode="widthFix"></image>
+  <swiper-item wx:for="{{banners}}" wx:for-item="item" wx:key="id">
+    <image src="{{item}}" mode="widthFix"></image>
   </swiper-item>
 </swiper>
 
@@ -9,14 +9,10 @@
 </view>
 
 <view class="dots" wx:if="{{swiperCurrent + 1 == swiperMaxNumber}}">
-  <form bindsubmit="goToIndex" report-submit="true">
-    <button size="mini" form-type="submit" class="into-button">进入应用</button>
-  </form>
-</view>
-
-<view class="zan-dialog {{showDialog?'zan-dialog--show':''}}">
-  <view class="zan-dialog__mask" bindtap="toggleDialog" />
-  <view class="zan-dialog__container">
-    <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class="auth-button">授 权</button>
-  </view>
+  <block wx:if="{{authorized}}">
+    <button size="mini" bindtap="goToIndex" class="into-button">进入应用</button>
+  </block>
+  <block wx:else>
+    <button size="mini" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class="into-button">进入应用</button>
+  </block>
 </view>
