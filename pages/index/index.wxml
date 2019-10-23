@@ -1,0 +1,29 @@
+<scroll-view scroll-y="true">
+  <block wx:for="{{activityRecords}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}" wx:key="{{idx}}">
+    <view class="record-item" style="flex-direction:column;">
+      <view class="organizer-info">
+        <view class="avatar">
+          <image src="../images/activity_selected.png"></image>
+        </view>
+        <text>{{item.organizer}}</text>
+      </view>
+      <view class="title" data-uuid="{{item.uuid}}" bindtap="bindDetail">{{item.title}}</view>
+      <view class="content" data-uuid="{{item.uuid}}" bindtap="bindDetail">{{item.content}}</view>
+      <view class="tail">
+        <view class="like dot">
+          <a>{{item.thumUpNumber}} Thum up </a>
+        </view>
+        <view class="comments dot">
+          <a>{{item.commentNumber}} Comment </a>
+        </view>
+        <view class="join">
+          <a>{{item.joinNumber}} Join </a>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+<view style="text-align: center;margin: 10px;">
+  <view wx:if="{{noMore}}">没有更多了</view>
+  <view wx:if="{{loadingFailed}}">数据加载失败,请重试</view>
+</view>

@@ -1,0 +1,84 @@
+.zan-dialog__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0);
+  display: none;
+}
+
+.zan-dialog__container {
+  position: fixed;
+  bottom: 400rpx;
+  width: 650rpx;
+  height: 350rpx;
+  margin-left: 50rpx;
+  background: #f8f8f8;
+  transform: translateY(300%);
+  transition: all 0.4s ease;
+  z-index: 12;
+  border-radius: 20rpx;
+  box-shadow: 0px 3px 3px 2px gainsboro;
+}
+
+.zan-dialog--show .zan-dialog__container {
+  transform: translateY(0);
+}
+
+.zan-dialog--show .zan-dialog__mask {
+  display: block;
+}
+
+.into-button {
+  background-color: #0d8fef;
+  color: white;
+}
+
+.auth-button {
+  margin: 20rpx 80rpx;
+  background-color: #0d8fef;
+  color: white;
+}
+
+.launch_wrp {
+  background-color: #cacaca80;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*垂直居中*/
+  justify-content: center; /*水平居中*/
+}
+
+.launch_wrp swiper-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.dots .dot {
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.6s;
+  opacity: 0.5;
+}
+
+.dots .dot.active {
+  width: 14rpx;
+  opacity: 1;
+}

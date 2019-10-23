@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/launch/launch",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/person/info",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#dddddd",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 100
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#aaaaaa",
+    "selectedColor": "#5f5f5f",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "活 动",
+        "iconPath": "pages/images/activity.png",
+        "selectedIconPath": "pages/images/activity_selected.png"
+      },
+      {
+        "pagePath": "pages/person/info",
+        "text": "我 的",
+        "iconPath": "pages/images/person.png",
+        "selectedIconPath": "pages/images/person_selected.png"
+      }
+    ]
+  }
+}
