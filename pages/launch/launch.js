@@ -45,10 +45,9 @@ Page({
   },
 
   loginBackend: function() {
-    // 登录
+    // TODO 将直接访问微信登录接口替换为在后台访问微信接口获取openId执行登录操作👳‍♂️
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
         wx.reLaunch({
           url: '/pages/index/index',
         });
