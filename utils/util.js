@@ -26,8 +26,34 @@ function getDetailByUuid(uuid) {
   })[0];
 }
 
+function thumUp(activityUuid, userUuid, praised) {
+  var detail = getDetailByUuid(activityUuid);
+  if (praised) {
+    detail.approvers.push(userUuid);
+  } else {
+    var index = detail.approvers.indexOf(userUuid);
+    if (index > -1) {
+      detail.approvers.splice(index, 1);
+    }
+  }
+}
+
+function join(activityUuid, userUuid, joined) {
+  var detail = getDetailByUuid(activityUuid);
+  if (joined) {
+    detail.participants.push(userUuid);
+  } else {
+    var index = detail.participants.indexOf(userUuid);
+    if (index > -1) {
+      detail.participants.splice(index, 1);
+    }
+  }
+}
+
 module.exports = {
   formatTime: formatTime,
   getNews: getNews,
   getDetailByUuid: getDetailByUuid,
+  thumUp: thumUp,
+  join: join
 }

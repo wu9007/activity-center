@@ -8,7 +8,7 @@ Page({
     authorized: false
   },
 
-  onLoad: function(options) {
+  onLoad: function (options) {
     var that = this;
     if (!that.data.authorized) {
       wx.getSetting({
@@ -23,11 +23,11 @@ Page({
     }
   },
 
-  goToIndex: function() {
+  goToIndex: function () {
     var that = this;
     wx.getUserInfo({
       success: res => {
-        app.globalData.userInfo = res.userInfo
+        app.globalData.userInfo = res.userInfo;
         that.loginBackend();
         if (this.userInfoReadyCallback) {
           this.userInfoReadyCallback(res)
@@ -36,7 +36,7 @@ Page({
     });
   },
 
-  onGotUserInfo: function(e) {
+  onGotUserInfo: function (e) {
     var that = this;
     if (e.detail.userInfo) {
       app.globalData.userInfo = e.detail.userInfo;
@@ -44,10 +44,11 @@ Page({
     }
   },
 
-  loginBackend: function() {
+  loginBackend: function () {
     // TODO 将直接访问微信登录接口替换为在后台访问微信接口获取openId执行登录操作👳‍♂️
     wx.login({
       success: res => {
+        app.globalData.userInfo.uuid = '0037';
         wx.reLaunch({
           url: '/pages/index/index',
         });
@@ -55,7 +56,7 @@ Page({
     });
   },
 
-  swiperchange: function(e) {
+  swiperchange: function (e) {
     this.setData({
       swiperCurrent: e.detail.current
     })

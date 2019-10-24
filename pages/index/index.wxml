@@ -11,13 +11,13 @@
       <view class="content" data-uuid="{{item.uuid}}" bindtap="bindDetail">{{item.content}}</view>
       <view class="tail">
         <view class="like dot">
-          <a>{{item.thumUpNumber}} Thum up </a>
+          <a>{{item.approvers.length}} Thum up </a>
         </view>
         <view class="comments dot">
-          <a>{{item.commentNumber}} Comment </a>
+          <a>{{item.commentators.length}} Comment </a>
         </view>
         <view class="join">
-          <a>{{item.joinNumber}} Join </a>
+          <a>{{item.participants.length}} Join </a>
         </view>
       </view>
     </view>

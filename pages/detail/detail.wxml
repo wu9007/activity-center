@@ -20,16 +20,16 @@
   
   <view class="detail-footer flex-wrp">
       <view class="operation flex-item flex-wrp">
-        <view class="operation-btn flex-item">
-          <image src="../images/like.png"></image>
+        <view class="operation-btn flex-item" bindtap="onThumUp">
+          <image src="{{praised ? '../images/like_selected.png' : '../images/like.png'}}"></image>
           <text>Like</text>
         </view>
-        <view class="operation-btn flex-item">
-          <image src="../images/join.png"></image>
+        <view class="operation-btn flex-item" bindtap="onJoin">
+          <image src="{{joined ? '../images/join_selected.png' : '../images/join.png'}}"></image>
           <text>Join</text>
         </view>
         <view class="operation-btn flex-item">
-          <image src="../images/comment.png"></image>
+          <image src="{{commented ? '../images/comment_selected.png': '../images/comment.png'}}"></image>
           <text>Comment</text>
         </view>
     </view>
