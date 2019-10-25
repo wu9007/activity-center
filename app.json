@@ -6,6 +6,11 @@
         "pages/person/info",
         "pages/detail/detail"
     ],
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序的签到功能"
+        }
+    },
     "window": {
         "backgroundTextStyle": "dark",
         "navigationBarBackgroundColor": "#dddddd",
