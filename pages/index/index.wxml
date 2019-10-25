@@ -6,19 +6,19 @@
           <image src="../images/activity_selected.png"></image>
         </view>
         <text class="organizer-name">{{item.organizer}}</text>
-        <text class="organizer-time">{{item.timeTnterval}}</text>
+        <text class="organizer-time">{{item.timeInterval}}</text>
       </view>
       <view class="title" data-uuid="{{item.uuid}}" bindtap="bindDetail">{{item.title}}</view>
       <view class="content" data-uuid="{{item.uuid}}" bindtap="bindDetail">{{item.content}}</view>
       <view class="tail">
         <view class="like dot">
-          <a>{{item.approvers.length}} Thum up </a>
+          <a>{{item.approvers.length}} Thum up</a>
         </view>
         <view class="comments dot">
-          <a>{{item.commentators.length}} Comment </a>
+          <a>{{item.commentators.length}} Comment</a>
         </view>
         <view class="join">
-          <a>{{item.participants.length}} Join </a>
+          <a>{{item.participants.length}} Join</a>
         </view>
       </view>
     </view>

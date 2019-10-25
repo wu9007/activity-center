@@ -1,0 +1,3 @@
+<view class="container">
+  <view class="{{direction==='h'?'h-line':'v-line'}}"></view>
+</view>

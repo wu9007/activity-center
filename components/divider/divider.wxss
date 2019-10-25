@@ -1,0 +1,11 @@
+.h-line {
+    background: #E0E3DA;
+    width: 100%;
+    height: 2rpx;
+}
+
+.v-line {
+    background: #E0E3DA;
+    height: 100%;
+    width: 2rpx;
+}

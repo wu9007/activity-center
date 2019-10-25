@@ -1,49 +1,130 @@
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+Page {
+    background-color: #dddddd;
 }
 
-.userinfo-avatar {
-  width: 160rpx;
-  height: 160rpx;
-  margin-top: 40rpx;
-  margin-bottom: 25rpx;
-  border-radius: 50%;
+.person-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 
-.userinfo-nickname {
-  font-size: 45rpx;
-  font-family: 'Times New Roman', Times, serif;
+.userinfo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 26rpx;
+    padding-bottom: 30rpx;
 }
 
-.userinfo-additional{
-  margin: 10rpx;
-  padding: 2rpx 15rpx;
-  border-radius: 45rpx;
-  border: solid 1px darkgray;
-  font-size: 20rpx;
-  color: darkgrey;
+.userinfo-container .userinfo-avatar {
+    width: 160rpx;
+    height: 160rpx;
+    margin-top: 40rpx;
+    margin-bottom: 25rpx;
+    border-radius: 50%;
 }
 
-.active-info{
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 190rpx;
-  background-color: gray;
-  margin-top: 30rpx;
+.userinfo-container .userinfo-nickname {
+    font-size: 45rpx;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.active-info view{
-  flex:1;
-  height: 170rpx;
-  background-color: aquamarine;
-  display:flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  margin: 20rpx;
+.userinfo-container .userinfo-additional {
+    margin: 10rpx;
+    padding: 2rpx 15rpx;
+    border-radius: 45rpx;
+    border: solid 1px darkgray;
+    font-size: 20rpx;
+    color: darkgrey;
+}
+
+.userinfo-container .active-info {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 120rpx;
+    margin-top: 30rpx;
+}
+
+.userinfo-container .active-info view {
+    flex: 1;
+    height: 100rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20rpx;
+}
+
+.userinfo-container .active-info view .active-value {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 0;
+}
+
+.userinfo-container .active-info view .active-num {
+    font-size: 40rpx;
+    margin-right: 6rpx;
+}
+
+.userinfo-container .active-info view .active-unit {
+    font-size: 25rpx;
+    margin-bottom: 5rpx;
+}
+
+.userinfo-container .active-info view .active-key {
+    font-size: 25rpx;
+    margin-top: 6rpx;
+    color: darkgrey;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 26rpx;
+}
+
+.menu-container .menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 102rpx;
+    padding: 10rpx 20rpx;
+    background-color: white;
+}
+
+.menu-container .menu-item .menu-avatar {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu-container .menu-item .menu-avatar image {
+    display: inline-block;
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 45rpx;
+    vertical-align: middle;
+}
+
+.menu-container .menu-item .menu-name {
+    margin-left: 20rpx;
+    font-size: 38rpx;
+    flex: 1;
+}
+
+.menu-container .menu-item .menu-value {
+    font-size: 37rpx;
+    margin: 0 5rpx;
+}
+
+.menu-container .menu-item .menu-unit {
+    font-size: 25rpx;
+    margin-bottom: -6rpx;
+    color: darkgrey;
 }

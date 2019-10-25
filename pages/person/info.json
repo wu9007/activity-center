@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "个人中心"
+    "usingComponents": {
+        "divider": "../../components/divider/divider",
+        "arrow": "../../components/arrow/arrow"
+    },
+    "navigationBarTitleText": "个人中心"
 }
