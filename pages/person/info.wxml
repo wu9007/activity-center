@@ -1,4 +1,9 @@
 <view class="userinfo">
   <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
   <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <view class="userinfo-additional">
+    <text class="dot">{{userInfo.gender===1?'男': userInfo.gender===2?'女':''}}</text>
+    <text class="space">{{userInfo.province}}</text>
+    <text>{{userInfo.city}}</text>
+  </view>
 </view>

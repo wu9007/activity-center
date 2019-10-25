@@ -21,11 +21,14 @@ Page({
         }
       });
     }
+    // 开发使用，快速定位到正在开发的页面
+    this.goToIndex();
   },
 
   goToIndex: function () {
     var that = this;
     wx.getUserInfo({
+      lang: "zh_CN",
       success: res => {
         app.globalData.userInfo = res.userInfo;
         that.loginBackend();
@@ -50,7 +53,7 @@ Page({
       success: res => {
         app.globalData.userInfo.uuid = '0037';
         wx.reLaunch({
-          url: '/pages/index/index',
+          url: '/pages/person/info',
         });
       }
     });

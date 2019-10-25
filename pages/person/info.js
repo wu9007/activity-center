@@ -9,5 +9,6 @@ Page({
     that.setData({
       userInfo: app.globalData.userInfo
     });
+    console.log(that.data.userInfo);
   }
 })

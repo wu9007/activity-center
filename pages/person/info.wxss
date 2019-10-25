@@ -5,13 +5,23 @@
 }
 
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 40rpx;
+  margin-bottom: 25rpx;
   border-radius: 50%;
 }
 
 .userinfo-nickname {
-  color: #aaa;
+  font-size: 45rpx;
+  font-family: 'Times New Roman', Times, serif;
 }
 
+.userinfo-additional{
+  margin: 10rpx;
+  padding: 2rpx 15rpx;
+  border-radius: 45rpx;
+  border: solid 1px darkgray;
+  font-size: 20rpx;
+  color: darkgrey;
+}

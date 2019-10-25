@@ -11,7 +11,11 @@
 }
 
 .dot ::after {
-  content: "•";
+  content: " • ";
+}
+
+.space ::after{
+  content: " ";
 }
 
 .flex-wrp {
