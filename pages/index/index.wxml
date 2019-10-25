@@ -5,7 +5,8 @@
         <view class="avatar">
           <image src="../images/activity_selected.png"></image>
         </view>
-        <text>{{item.organizer}}</text>
+        <text class="organizer-name">{{item.organizer}}</text>
+        <text class="organizer-time">{{item.timeTnterval}}</text>
       </view>
       <view class="title" data-uuid="{{item.uuid}}" bindtap="bindDetail">{{item.title}}</view>
       <view class="content" data-uuid="{{item.uuid}}" bindtap="bindDetail">{{item.content}}</view>

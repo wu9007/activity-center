@@ -14,6 +14,9 @@
 .organizer-info {
   left: 0;
   height: 50rpx;
+  display:flex;
+  flex-direction: row;
+  align-items: flex-end;
 }
 
 .organizer-info .avatar {
@@ -31,7 +34,8 @@
   background-color: rgba(221, 221, 221, 0.123);
 }
 
-.organizer-info text {
+.organizer-info .organizer-name {
+  flex:1;
   display: inline-block;
   height: 45rpx;
   line-height: 45rpx;
@@ -39,6 +43,11 @@
   margin-right: 15rpx;
   color: #a0acac;
   font-size: 37rpx;
+}
+
+.organizer-info .organizer-time {
+  font-size: 20rpx;
+  color: #a0acac;
 }
 
 .title {

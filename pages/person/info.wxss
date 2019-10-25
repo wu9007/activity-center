@@ -25,3 +25,25 @@
   font-size: 20rpx;
   color: darkgrey;
 }
+
+.active-info{
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 190rpx;
+  background-color: gray;
+  margin-top: 30rpx;
+}
+
+.active-info view{
+  flex:1;
+  height: 170rpx;
+  background-color: aquamarine;
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin: 20rpx;
+}

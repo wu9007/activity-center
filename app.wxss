@@ -11,10 +11,14 @@
 }
 
 .dot ::after {
-  content: " • ";
+  content: "•";
 }
 
-.space ::after{
+.before-space ::before{
+  content: " ";
+}
+
+.after-space ::after{
   content: " ";
 }
 
