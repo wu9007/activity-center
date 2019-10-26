@@ -12,26 +12,21 @@ Page({
     },
 
     scanToRegister: function(e) {
-        var that = this;
-        wx.scanCode({
-            success(res) {
-                console.log(res)
-                that.getLocalData();
-            }
-        })
-    },
-
-    getLocalData: function(e) {
-        var document = document;
-        var that = this;
-        var w = wx;
+        var that = this,
+            document = document,
+            weChat = wx;
         wx.getLocation({
             type: 'gcj02',
             success(res) {
-                console.log(res);
+                weChat.scanCode({
+                    success(res) {
+                        console.log(res)
+                        that.getLocalData();
+                    }
+                })
             },
             fail() {
-                w.showActionSheet({
+                weChat.showActionSheet({
                     itemList: ['去授权'],
                     success: function(res) {
                         that.openSetting();

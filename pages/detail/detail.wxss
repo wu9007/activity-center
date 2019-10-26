@@ -64,11 +64,10 @@
 .detail-footer {
     position: fixed;
     bottom: 0;
-    height: 70rpx;
     border-top: solid 1px #ebebeb;
     background: #ffffff;
     width: 670rpx;
-    padding: 20rpx 40rpx;
+    padding: 15rpx 40rpx;
 }
 
 .detail-footer .operation-wrp {
@@ -77,12 +76,16 @@
 
 .detail-footer .operation {
     justify-content: space-between;
-    padding: 0 0 0 60rpx;
 }
 
 .detail-footer .operation-btn {
     flex: 1;
     text-align: center;
+    background-color: transparent;
+}
+
+button:after {
+    border: none;
 }
 
 .detail-footer .operation image {

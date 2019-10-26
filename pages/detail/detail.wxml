@@ -8,31 +8,32 @@
       <text class="title-des">{{detail.title}}</text>
     </view>
   </view>
-
   <view class="content">
     <text>{{detail.content}}</text>
     <view class="image-wrp">
-      <block wx:for="{{detail.images}}" wx:key="{{index}}"  data-index="{{index}}" src="{{item}}">
+      <block wx:for="{{detail.images}}" wx:key="{{index}}" data-index="{{index}}" src="{{item}}">
         <image src="{{item}}"></image>
-    </block>
+      </block>
     </view>
   </view>
-  
   <view class="detail-footer flex-wrp">
-      <view class="operation flex-item flex-wrp">
-        <view class="operation-btn flex-item" bindtap="onThumUp">
-          <image src="{{praised ? '../images/like_selected.png' : '../images/like.png'}}"></image>
-          <text>Like</text>
-        </view>
-        <view class="operation-btn flex-item" bindtap="onJoin">
-          <image src="{{joined ? '../images/join_selected.png' : '../images/join.png'}}"></image>
-          <text>Join</text>
-        </view>
-        <view class="operation-btn flex-item">
-          <image src="{{commented ? '../images/comment_selected.png': '../images/comment.png'}}"></image>
-          <text>Comment</text>
-        </view>
+    <view class="operation flex-item flex-wrp">
+      <button class="operation-btn flex-item" open-type="share">
+        <image src="../images/share.png" mode="aspectFit"></image>
+        <text>Share</text>
+      </button>
+      <button class="operation-btn flex-item">
+        <image src="../images/comment.png" mode="aspectFit"></image>
+        <text>Comment</text>
+      </button>
+      <button class="operation-btn flex-item" bindtap="onThumUp">
+        <image src="{{praised ? '../images/like_selected.png' : '../images/like.png'}}" mode="aspectFit"></image>
+        <text>Like</text>
+      </button>
+      <button class="operation-btn flex-item" bindtap="onJoin">
+        <image src="{{joined ? '../images/join_selected.png' : '../images/join.png'}}" mode="aspectFit"></image>
+        <text>Join</text>
+      </button>
     </view>
   </view>
-
 </view>

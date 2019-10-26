@@ -17,12 +17,12 @@ Page({
                         that.setData({
                             authorized: true
                         });
+                        // 开发使用，快速定位到正在开发的页面
+                        this.goToIndex();
                     }
                 }
             });
         }
-        // 开发使用，快速定位到正在开发的页面
-        this.goToIndex();
     },
 
     goToIndex: function() {
@@ -53,13 +53,13 @@ Page({
             success: res => {
                 app.globalData.userInfo.uuid = '0037';
                 wx.reLaunch({
-                    url: '/pages/person/info',
+                    url: '/pages/index/index',
                 });
             }
         });
     },
 
-    swiperchange: function(e) {
+    swiperChange: function(e) {
         this.setData({
             swiperCurrent: e.detail.current
         })
