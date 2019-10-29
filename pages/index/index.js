@@ -5,29 +5,49 @@ Page({
     page: 1,
     loading: false,
     noMore: false,
-    loadingFailed: false
+    loadingFailed: false,
+    goTopHidden: true
   },
 
-  onLoad: function(options) {
+  onLoad: function (options) {
     this.refresh();
   },
 
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
     this.refresh();
   },
 
-  onReachBottom: function() {
+  onReachBottom: function () {
     this.loadMore();
   },
 
-  refresh: function() {
+  onPageScroll: function (e) {
+    if (e.scrollTop > 200) {
+      this.setData({
+        goTopHidden: false
+      });
+    } else {
+      this.setData({
+        goTopHidden: true
+      });
+    }
+  },
+
+  goTop: function (e) {
+    wx.pageScrollTo({
+      scrollTop: 0,
+      duration: 300
+    });
+  },
+
+  refresh: function () {
     var that = this;
     if (!that.data.loading) {
       wx.showNavigationBarLoading();
       that.setData({
         loading: true
       });
-      setTimeout(function() {
+      setTimeout(function () {
         that.setData({
           activityRecords: util.getNews(),
           page: 1,
@@ -54,14 +74,14 @@ Page({
     // });
   },
 
-  loadMore: function() {
+  loadMore: function () {
     var that = this,
       news = [];
     if (!that.data.loading) {
       wx.showLoading({
         title: '玩命加载中',
       });
-      setTimeout(function() {
+      setTimeout(function () {
         news = util.getNews();
         if (news.length === 0) {
           that.setData({
@@ -96,7 +116,7 @@ Page({
     //   });
   },
 
-  bindDetail: function(e) {
+  bindDetail: function (e) {
     wx.navigateTo({
       url: '/pages/detail/detail?uuid=' + e.currentTarget.dataset.uuid
     })

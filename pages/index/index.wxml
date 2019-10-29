@@ -28,3 +28,4 @@
   <view wx:if="{{noMore}}">没有更多了</view>
   <view wx:if="{{loadingFailed}}">数据加载失败,请重试</view>
 </view>
+<image src='../images/goTop.png' class='goTop' hidden='{{goTopHidden}}' bindtap="goTop"></image>
