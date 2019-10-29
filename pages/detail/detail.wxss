@@ -100,3 +100,30 @@ button:after {
     font-size: 14rpx;
     color: #bebebe;
 }
+.comment{
+    margin-bottom: 160rpx;
+}
+.comment textarea{
+    width: auto;
+    min-height: 120rpx;
+    margin: 20rpx;
+    padding: 30rpx;
+    border: solid 1px #b8b8b8;
+    border-radius: 20rpx;
+    font-size: 30rpx;
+}
+
+.comment button{
+    background-color: #6190e8;
+    border-color: #81a6ed;
+    color: white;
+    margin: 0 20rpx 50rpx 20rpx;
+}
+
+.comment .comment-item{
+    padding: 20rpx;
+    margin: 8rpx 20rpx;
+    background: rgb(241, 241, 241);
+    border: none;
+    box-shadow: 0 2px 5px rgb(179, 179, 179);
+}

@@ -4,10 +4,12 @@ Page({
     data: {
         detail: null,
         praised: false,
-        joined: false
+        joined: false,
+        commentFocus: false,
+        commentList: ['第一条评论']
     },
 
-    onLoad: function(options) {
+    onLoad: function (options) {
         const detail = util.getDetailByUuid(options.uuid),
             userUuid = app.globalData.userInfo.uuid;
         this.setData({
@@ -17,27 +19,27 @@ Page({
         });
     },
 
-    onThumUp: function(e) {
+    onThumUp: function (e) {
         var that = this,
             praised = !that.data.praised;
         util.thumUp(that.data.detail.uuid, app.globalData.userInfo.uuid, praised);
         this.setData({ praised: praised });
     },
 
-    onJoin: function() {
+    onJoin: function () {
         var that = this,
             joined = !that.data.joined;
         util.join(that.data.detail.uuid, app.globalData.userInfo.uuid, joined);
         this.setData({ joined: joined });
     },
 
-    onUnload: function() {
+    onUnload: function () {
         var pages = getCurrentPages()
         var prevPage = pages[pages.length - 2]
         prevPage.setData({ activityRecords: prevPage.data.activityRecords });
     },
 
-    onShareAppMessage: function(res) {
+    onShareAppMessage: function (res) {
         var that = this;
         if (res.from === 'button') {
 
@@ -45,9 +47,25 @@ Page({
         return {
             title: '转发',
             path: '/pages/detail/detail?uuid=' + that.data.detail.uuid,
-            success: function(res) {
+            success: function (res) {
                 console.log('成功', res)
             }
         }
+    },
+
+    goComment: function (res) {
+        var that = this;
+        that.setData({ commentFocus: true });
+        wx.pageScrollTo({
+            selector: '#comment-textarea',
+            duration: 300
+        });
+    },
+
+    formSubmit: function (e) {
+        var that = this,
+            comentContent = e.detail.value.commentContent;
+        that.data.commentList.push(comentContent)
+        that.setData({ commentList: that.data.commentList });
     }
 });

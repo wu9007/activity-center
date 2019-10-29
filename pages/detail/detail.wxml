@@ -16,13 +16,22 @@
       </block>
     </view>
   </view>
+  <view class="comment">
+    <form bindsubmit="formSubmit">
+      <textarea id="comment-textarea" name="commentContent" auto-height placeholder="请开始你的表演" focus="{{commentFocus}}" />
+      <button form-type="submit">提 交</button>
+    </form>
+    <view class="comment-item" wx:for="{{commentList}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+      {{item}}
+    </view>
+  </view>
   <view class="detail-footer flex-wrp">
     <view class="operation flex-item flex-wrp">
       <button class="operation-btn flex-item" open-type="share">
         <image src="../images/share.png" mode="aspectFit"></image>
         <text>Share</text>
       </button>
-      <button class="operation-btn flex-item">
+      <button class="operation-btn flex-item" bindtap="goComment">
         <image src="../images/comment.png" mode="aspectFit"></image>
         <text>Comment</text>
       </button>
