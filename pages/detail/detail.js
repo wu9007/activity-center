@@ -6,7 +6,7 @@ Page({
         praised: false,
         joined: false,
         commentFocus: false,
-        commentList: ['第一条评论']
+        myComent: ''
     },
 
     onLoad: function (options) {
@@ -64,8 +64,15 @@ Page({
 
     formSubmit: function (e) {
         var that = this,
-            comentContent = e.detail.value.commentContent;
-        that.data.commentList.push(comentContent)
-        that.setData({ commentList: that.data.commentList });
+            myComent = e.detail.value.myComent,
+            userInfo = app.globalData.userInfo;
+        if (myComent.trim().length > 0) {
+            that.data.detail.comments.unshift({ "commentator": userInfo.nickName, "avatarUrl": userInfo.avatarUrl, "content": myComent })
+            that.setData({ detail: that.data.detail, myComent: '' });
+            wx.pageScrollTo({
+                selector: '#comment-item-0',
+                duration: 300
+            });
+        }
     }
 });

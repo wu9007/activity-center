@@ -18,11 +18,11 @@
   </view>
   <view class="comment">
     <form bindsubmit="formSubmit">
-      <textarea id="comment-textarea" name="commentContent" auto-height placeholder="请开始你的表演" focus="{{commentFocus}}" />
+      <textarea id="comment-textarea" name="myComent" value="{{myComent}}" auto-height placeholder="请开始你的表演" focus="{{commentFocus}}" cursor-spacing="250rpx" />
       <button form-type="submit">提 交</button>
     </form>
-    <view class="comment-item" wx:for="{{commentList}}" wx:key="index" wx:for-index="index" wx:for-item="item">
-      {{item}}
+    <view class="comment-item" wx:for="{{detail.comments}}" wx:key="index" wx:for-index="index" wx:for-item="item" id="{{'comment-item-'+index}}">
+      {{item.avatarUrl}}-{{item.commentator}}: {{item.content}}
     </view>
   </view>
   <view class="detail-footer flex-wrp">
