@@ -121,9 +121,48 @@ button:after {
 }
 
 .comment .comment-item{
-    padding: 20rpx;
-    margin: 8rpx 20rpx;
-    background: rgb(241, 241, 241);
+    margin: 50rpx 20rpx 0rpx;
+    display: flex;
+    flex-direction: row;
+}
+
+.comment .comment-item .comment-item-avatar{
+    height: 100rpx;
+    width: 100rpx;
+    background: rgb(247, 247, 247);
     border: none;
-    box-shadow: 0 2px 5px rgb(179, 179, 179);
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+}
+
+.comment .comment-item .comment-item-avatar image{
+    height: 100rpx;
+    width: 100rpx;
+}
+
+.comment .comment-item .comment-item-main{
+    flex: 1;
+    padding: 20rpx;
+    background: rgb(247, 247, 247);
+    border: none;
+    box-shadow: 0 2px 5px rgb(204, 203, 203);
+}
+
+.comment .comment-item .comment-item-main .comment-item-commentator{
+    color: #6190e8;
+    font-size: 30rpx;
+}
+.comment-item-commentator::after{
+    content: " ";
+}
+
+.comment .comment-item .comment-item-main .comment-item-time{
+    color: gray;
+    font-size: 30rpx;
+}
+
+.comment .comment-item .comment-item-main .comment-item-content{
+    padding-top: 10rpx;
+    font-size: 40rpx;
+    word-break: break-all;
 }

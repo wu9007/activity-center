@@ -22,7 +22,16 @@
       <button form-type="submit">提 交</button>
     </form>
     <view class="comment-item" wx:for="{{detail.comments}}" wx:key="index" wx:for-index="index" wx:for-item="item" id="{{'comment-item-'+index}}">
-      {{item.avatarUrl}}-{{item.commentator}}: {{item.content}}
+      <view class="comment-item-avatar">
+        <image src="{{item.avatarUrl}}" />
+      </view>
+      <view class="comment-item-main">
+        <text class="comment-item-commentator">{{item.commentator}}</text>
+        <text class="comment-item-time">{{item.interval}}</text>
+        <view class="comment-item-content">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
     </view>
   </view>
   <view class="detail-footer flex-wrp">
