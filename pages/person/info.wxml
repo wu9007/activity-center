@@ -34,7 +34,7 @@
   <view class="menu-container">
     <view class="menu-item">
       <view class="menu-avatar">
-        <image src="../images/following.png"></image>
+        <image src="../images/following.png" mode="aspectFill"></image>
       </view>
       <text class="menu-name">关注</text>
       <text class="menu-unit">关注了</text>
@@ -44,7 +44,7 @@
     <divider />
     <view class="menu-item">
       <view class="menu-avatar">
-        <image src="../images/approved.png"></image>
+        <image src="../images/approved.png" mode="aspectFill"></image>
       </view>
       <text class="menu-name">我的点赞</text>
       <text class="menu-unit">送出</text>
@@ -54,7 +54,7 @@
     <divider />
     <view class="menu-item">
       <view class="menu-avatar">
-        <image src="../images/joined.png"></image>
+        <image src="../images/joined.png" mode="aspectFill"></image>
       </view>
       <text class="menu-name">我的活动</text>
       <text class="menu-unit">参加过</text>
@@ -65,7 +65,7 @@
   <view class="menu-container">
     <view class="menu-item" bindtap="scanToRegister">
       <view class="menu-avatar">
-        <image src="../images/scan.png"></image>
+        <image src="../images/scan.png" mode="aspectFill"></image>
       </view>
       <text class="menu-name">扫码签到</text>
       <arrow />
@@ -73,7 +73,7 @@
     <divider />
     <view class="menu-item">
       <view class="menu-avatar">
-        <image src="../images/publish.png"></image>
+        <image src="../images/publish.png" mode="aspectFill"></image>
       </view>
       <text class="menu-name">发起活动</text>
       <arrow />

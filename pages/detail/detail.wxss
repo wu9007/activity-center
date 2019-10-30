@@ -150,7 +150,7 @@ button:after {
 
 .comment .comment-item .comment-item-main .comment-item-commentator{
     color: #6190e8;
-    font-size: 30rpx;
+    font-size: 25rpx;
 }
 .comment-item-commentator::after{
     content: " ";
@@ -158,11 +158,11 @@ button:after {
 
 .comment .comment-item .comment-item-main .comment-item-time{
     color: gray;
-    font-size: 30rpx;
+    font-size: 22rpx;
 }
 
 .comment .comment-item .comment-item-main .comment-item-content{
     padding-top: 10rpx;
-    font-size: 40rpx;
+    font-size: 35rpx;
     word-break: break-all;
 }

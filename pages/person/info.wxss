@@ -108,7 +108,6 @@ Page {
     display: inline-block;
     width: 50rpx;
     height: 50rpx;
-    border-radius: 45rpx;
     vertical-align: middle;
 }
 
