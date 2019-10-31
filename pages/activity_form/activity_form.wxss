@@ -1,0 +1,16 @@
+.form-container{
+    padding: 20rpx;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+}
+
+.title .lable{
+    width: 150rpx;
+    text-align: right;
+}
+
+.title .content{
+}

@@ -4,14 +4,14 @@ Page({
         userInfo: null
     },
 
-    onLoad: function(options) {
+    onLoad: function (options) {
         var that = this;
         that.setData({
             userInfo: app.globalData.userInfo
         });
     },
 
-    scanToRegister: function(e) {
+    scanToRegister: function (e) {
         var that = this,
             document = document,
             weChat = wx;
@@ -28,7 +28,7 @@ Page({
             fail() {
                 weChat.showActionSheet({
                     itemList: ['去授权'],
-                    success: function(res) {
+                    success: function (res) {
                         that.openSetting();
                     }
                 })
@@ -36,7 +36,13 @@ Page({
         });
     },
 
-    openSetting: function() {
+    openSetting: function () {
         wx.openSetting()
+    },
+
+    createActivity: function () {
+        wx.navigateTo({
+            url: '/pages/activity_form/activity_form'
+        })
     }
 })

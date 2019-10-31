@@ -71,7 +71,7 @@
       <arrow />
     </view>
     <divider />
-    <view class="menu-item">
+    <view class="menu-item" bindtap="createActivity">
       <view class="menu-avatar">
         <image src="../images/publish.png" mode="aspectFill"></image>
       </view>

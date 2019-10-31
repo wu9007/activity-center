@@ -1,0 +1,8 @@
+<view class="form-container">
+    <form bindsubmit="saveActivity">
+        <view class="title">
+            <view class="lable">标题：</view>
+            <input class="content" name="title" placeholder="请录入标题" />
+        </view>
+    </form>
+</view>
