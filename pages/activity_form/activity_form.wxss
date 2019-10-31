@@ -1,16 +1,43 @@
 .form-container{
     padding: 20rpx;
+    display: flex;
+    flex-direction: column;
 }
 
 .title{
     display: flex;
     flex-direction: row;
+    margin-bottom: 20rpx;
 }
 
 .title .lable{
-    width: 150rpx;
+    flex: 1;
     text-align: right;
 }
 
-.title .content{
+.title .title-input{
+    flex: 4;
+    padding-left: 30rpx;
+    border: solid 1px #b8b8b8;
+    border-radius: 10rpx;
+    font-size: 35rpx;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+}
+
+.content .lable{
+    flex: 1;
+    text-align: right;
+}
+
+.content .content-textarea{
+    flex: 4;
+    min-height: 120rpx;
+    padding: 30rpx;
+    border: solid 1px #b8b8b8;
+    border-radius: 10rpx;
+    font-size: 35rpx;
 }
