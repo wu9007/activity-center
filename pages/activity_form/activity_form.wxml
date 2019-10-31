@@ -1,12 +1,18 @@
 <view class="form-container">
-    <form bindsubmit="saveActivity">
-        <view class="title">
-            <view class="lable">标题：</view>
-            <input class="title-input" name="title" placeholder="请录入标题" />
-        </view>
-        <view class="content">
-            <view class="lable">内容：</view>
-            <textarea class="content-textarea" name="content" placeholder="请输入内容"></textarea>
-        </view>
-    </form>
+  <form bindsubmit="saveActivity">
+    <input class="title" name="title" placeholder="请录入标题" />
+    <view>
+      <view class="type">
+        <picker class="picker" bindchange="selectType" value="{{typeId}}" range="{{typeArray}}">
+          <view>{{typeArray[typeIndex]}}</view>
+        </picker>
+        <arrow />
+      </view>
+    </view>
+    <textarea class="content" name="content" placeholder="请录入内容" maxlength="-1"></textarea>
+    <view class="time">
+      <date-time-picker title='选择时间' bind:dateTimePicker='selectTime' name='time' format='yyyy-MM-dd HH:mm:ss' />
+      <arrow />
+    </view>
+  </form>
 </view>

@@ -1,66 +1,36 @@
 // pages/activity_form/activity_form.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+    /**
+     * 页面的初始数据
+     */
+    data: {
+        typeArray: ['中国', '俄罗斯'],
+        typeObjectArray: [{
+                typeId: '001',
+                name: '中国'
+            },
+            {
+                typeId: '002',
+                name: '俄罗斯'
+            }
+        ],
+        typeIndex: 0,
+    },
 
-  },
+    selectType: function(e) {
+        var that = this;
+        this.setData({
+            typeIndex: e.detail.value,
+            activityTypeId: that.data.typeObjectArray[e.detail.value].typeId
+        })
+        console.log(this.data.activityTypeId);
+    },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+    selectTime: function(e) {
+        this.setData({
+            activityTime: e.detail
+        })
+        console.log(this.data.activityTime);
+    }
 })

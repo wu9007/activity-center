@@ -1,0 +1,3 @@
+<picker mode="multiSelector" bindchange="bindPickerChange" bindcolumnchange="bindPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+  <input disabled="{{true}}" value='{{value}}' name='{{name}}' />
+</picker>

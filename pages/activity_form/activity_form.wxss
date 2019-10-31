@@ -1,43 +1,46 @@
-.form-container{
+.form-container {
     padding: 20rpx;
     display: flex;
     flex-direction: column;
-}
-
-.title{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20rpx;
-}
-
-.title .lable{
-    flex: 1;
-    text-align: right;
-}
-
-.title .title-input{
-    flex: 4;
-    padding-left: 30rpx;
-    border: solid 1px #b8b8b8;
-    border-radius: 10rpx;
     font-size: 35rpx;
 }
 
-.content{
+.title {
+    padding: 10rpx 20rpx;
+    border-bottom: solid 1px #b8b8b8;
+    margin: 40rpx 20rpx;
+}
+
+.type {
     display: flex;
     flex-direction: row;
+    width: auto;
+    padding: 10rpx 20rpx;
+    border-bottom: solid 1px #b8b8b8;
+    margin: 40rpx 20rpx;
+    align-items: center;
 }
 
-.content .lable{
+.type .picker {
     flex: 1;
-    text-align: right;
 }
 
-.content .content-textarea{
-    flex: 4;
-    min-height: 120rpx;
-    padding: 30rpx;
-    border: solid 1px #b8b8b8;
-    border-radius: 10rpx;
-    font-size: 35rpx;
+.content {
+    width: auto;
+    padding: 10rpx 20rpx;
+    border-bottom: solid 1px #b8b8b8;
+    margin: 40rpx 20rpx;
+}
+
+.time {
+    display: flex;
+    flex-direction: row;
+    padding: 10rpx 20rpx;
+    border-bottom: solid 1px #b8b8b8;
+    margin: 40rpx 20rpx;
+    align-items: center;
+}
+
+.time date-time-picker {
+    flex: 1;
 }
