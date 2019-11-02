@@ -1,5 +1,8 @@
-# activity-center
+# Bi-Hu
 
-> 微信小程序 【非B—乎】  啊哈哈~~~
+> 微信小程序 【毙乎】  啊哈哈~~~
 
-![B——乎](https://github.com/wechat-program/album/blob/master/gif/activity-center.gif?raw=true)
+![起始页](https://github.com/wechat-program/album/blob/master/gif/activity-center/002.gif?raw=true)
+
+
+![个人管理页](https://github.com/wechat-program/album/blob/master/gif/activity-center/001.gif?raw=true)
