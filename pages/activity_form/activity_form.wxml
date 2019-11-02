@@ -14,5 +14,15 @@
       <date-time-picker title='选择时间' bind:dateTimePicker='selectTime' name='time' format='yyyy-MM-dd HH:mm:ss' />
       <arrow />
     </view>
+    <view class="adress" bindtap='chooseActivityLocation'>
+      <input class="adress-name" placeholder="选择位置" disabled="{{true}}" value="{{address}}" />
+      <arrow />
+    </view>
+    <view class="images">
+      <block wx:for="{{images}}" wx:key="*this">
+        <image class="image-wrp" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+      </block>
+      <image class="add-button" src="../images/add.png" bindtap="chooseImage" wx:if="{{images.length < 9}}" />
+    </view>
   </form>
 </view>
