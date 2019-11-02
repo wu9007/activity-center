@@ -81,5 +81,9 @@ Page({
             current: images[idx],  //当前预览的图片
             urls: images,  //所有要预览的图片
         })
+    },
+
+    saveActivity: function (e) {
+        console.log(e);
     }
 })

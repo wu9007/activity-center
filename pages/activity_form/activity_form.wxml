@@ -19,10 +19,11 @@
       <arrow />
     </view>
     <view class="images">
-      <block wx:for="{{images}}" wx:key="*this">
-        <image class="image-wrp" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+      <block wx:for="{{images}}" wx:key="{{index}}">
+        <image class="image-wrp" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview" bindlongpress="removeImage" />
       </block>
       <image class="add-button" src="../images/add.png" bindtap="chooseImage" wx:if="{{images.length < 9}}" />
     </view>
+    <button class="submit-button" form-type="submit">提 交</button>
   </form>
 </view>
